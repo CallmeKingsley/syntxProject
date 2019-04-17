@@ -15,6 +15,21 @@ class CityNameSearch extends Component {
 
   searchWeatherWithCityName(){
 
+    fetch("http://localhost:5000/syntx/getForecastInfoWithName", {
+        method: "POST",
+        headers: {
+            Action: "application/json",
+            "Content-Type": "application/json"
+        },
+        body: JSON.stringify({
+            cityName: this.state.cityName
+        })
+        }).then(response => {
+            return response.text();
+        }).then(responseData => {
+            this.setState({Data: JSON.parse(responseData)})
+        })
+        
   }
 
   handleChange(e) {

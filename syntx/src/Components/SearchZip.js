@@ -14,7 +14,20 @@ class ZipCodeSearch extends Component {
   }
 
   searchWeatherWithZipCode(){
-
+    fetch("http://localhost:5000/syntx/getForecastInfoWithZip", {
+        method: "POST",
+        headers: {
+            Action: "application/json",
+            "Content-Type": "application/json"
+        },
+        body: JSON.stringify({
+            cityName: this.state.ZipCode
+        })
+        }).then(response => {
+            return response.text();
+        }).then(responseData => {
+            this.setState({Data: JSON.parse(responseData)})
+        })
   }
 
   handleChange(e) {
