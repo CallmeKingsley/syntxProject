@@ -1,0 +1,28 @@
+.App{
+  display: flex;
+  flex-direction: column;
+  margin-top: 20%;
+}
+
+.switchBtn{
+  display: flex;
+  justify-content: center;
+  color: red;
+}
+.Search{
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+}
+.searchbar{
+  margin-right: 2%;
+  border: 2px solid gray;
+  padding: 10px;
+  background-color: lightgray;
+  border-radius: 10px;
+}
+.searchbtn{
+  margin-right: 2%;
+  padding: 10px;
+}
+button:hover{background-color:orange;}
