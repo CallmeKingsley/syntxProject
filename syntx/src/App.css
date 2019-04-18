@@ -25,4 +25,8 @@
   margin-right: 2%;
   padding: 10px;
 }
+.display{
+  display: flex;
+  flex-direction: row
+}
 button:hover{background-color:orange;}
